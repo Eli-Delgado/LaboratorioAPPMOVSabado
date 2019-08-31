@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core'; //Redirecciones
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 
@@ -39,14 +39,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/tab1',//si no pones nada, te redirecciona a tab1
         pathMatch: 'full'
       }
     ]
   },
   {
-    path: '',
-    redirectTo: '/tabs/tab1',
+    path: '', 
+    redirectTo: '/tabs/tab1',//si no pones nada, te redirecciona a tab1
     pathMatch: 'full'
   }
 ];
