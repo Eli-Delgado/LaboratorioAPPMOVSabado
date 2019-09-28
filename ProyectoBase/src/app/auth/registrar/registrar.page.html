@@ -1,27 +1,34 @@
-<ion-content  color="secondary">
-  <form  #form="ngForm" (ngSubmit)="register(form)">
+<ion-content>
+  <form [formGroup]='registrarForm' (ngSubmit)="register()">
+    <!--<form [formGroup]='rgistrar' #form="ngForm" (ngSubmit)="register(form)">         OLD      --> 
     <ion-grid>
-      <ion-row color="secondary" justify-content-center>
+      <ion-row  justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
           <div text-center>
             <h3><b>Crea tu cuenta</b></h3>
           </div>
           <div padding>
             <ion-item>
-              <ion-input  name="name" type="text" placeholder="Nombre" ngModel required></ion-input>
+              <ion-input formControlName="nombre" type="text" placeholder="Nombre" ngModel required></ion-input>
+              <!--  formControlName Darle un nombre a ese imput-->
+              <div color="error" *ngIf="f.nombre.error">*</div>
             </ion-item>
             <ion-item>
-              <ion-input name="email" type="email" placeholder="Correo" ngModel required></ion-input>
+              <ion-input formControlName="correo" type="email" placeholder="Correo" ngModel required></ion-input>
+              <div color="error" *ngIf="f.correo.error">*</div>
             </ion-item>
             <ion-item>
-              <ion-input name="password" type="password" placeholder="Contraseña" ngModel required></ion-input>
+              <ion-input formControlName="contrasena" type="password" placeholder="Contraseña" ngModel required></ion-input>
+              <div color="error" *ngIf="f.contrasena.error">*</div>
             </ion-item>
             <ion-item>
-              <ion-input name="confirm" type="password" placeholder="Repetir contraseña" ngModel required></ion-input>
+              <ion-input formControlName="confirmacionContrasena" type="password" placeholder="Repetir contraseña" ngModel required></ion-input>
+              <div color="error" *ngIf="f.confirmacionContrasena.error">*</div>
             </ion-item>
           </div>
           <div padding>
-            <ion-button shape ="round" size="large" type="submit" [disabled]="form.invalid" expand="block">Registrar</ion-button>
+            <ion-button shape ="round" size="large" type="submit" [disabled]="registrarForm.invalid" expand="block"><b>Registrar</b></ion-button>
+            <!--[disabled]="registrarForm.invalid"     Si al menos un campo es invalido, deshabilitalo-->
           </div>
         </ion-col>
       </ion-row>

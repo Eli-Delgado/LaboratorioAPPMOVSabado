@@ -1,14 +1,14 @@
-<ion-content color="secondary" padding>
+<ion-content  padding>
   <form #form="ngForm" (ngSubmit)="login(form)">
     <ion-grid>
-      <ion-row color="secondary" justify-content-center>
+      <ion-row  justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
           <div text-center>
             <br>
-            <h1><b><b>FINIXER.</b></b></h1>
+            <h1 style="font-size:50px"><b>FINIXER.</b></h1>
           </div>
           <div padding>
-            <br><br><br>
+            <br><br>
             <div text-center>
               <b>Accede</b>
             </div>
@@ -21,7 +21,8 @@
             </ion-item>
           </div>
           <div padding>
-            <ion-button shape ="round" size="large" type="submit" [disabled]="form.invalid" expand="block">Entrar</ion-button>
+            <ion-button shape ="round" size="large" type="submit" [disabled]="form.invalid" expand="block"><b>Entrar</b></ion-button>
+            <!--[disabled]="form.invalid"-->
           </div>
         </ion-col>
       </ion-row>
