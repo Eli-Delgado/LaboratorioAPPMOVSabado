@@ -8,21 +8,20 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //Estas librerias las usararemos en toda la app.
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {HttpClientModule} from '@angular/common/http'; //
+import { HttpClientModule } from '@angular/common/http';
 import { RegistrarPage } from './auth/registrar/registrar.page';
 
-
 @NgModule({
-  declarations: [AppComponent, RegistrarPage],
+  declarations: [ AppComponent, RegistrarPage],
   entryComponents: [],
   imports: [BrowserModule,
-            IonicModule.forRoot(), 
-            AppRoutingModule, 
-            FormsModule, //
-            ReactiveFormsModule, //
-            HttpClientModule //
+            IonicModule.forRoot(),
+            AppRoutingModule,
+            FormsModule,
+            ReactiveFormsModule,
+            HttpClientModule
           ],
   providers: [
     StatusBar,
@@ -31,4 +30,4 @@ import { RegistrarPage } from './auth/registrar/registrar.page';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,5 +1,5 @@
 <ion-content>
-  <form [formGroup]='registrarForm' (ngSubmit)="register()">
+  <form [formGroup]="registrarForm" (ngSubmit)="registrar()">
     <!--<form [formGroup]='rgistrar' #form="ngForm" (ngSubmit)="register(form)">         OLD      --> 
     <ion-grid>
       <ion-row  justify-content-center>
@@ -11,7 +11,7 @@
             <ion-item>
               <ion-input formControlName="nombre" type="text" placeholder="Nombre" ngModel required></ion-input>
               <!--  formControlName Darle un nombre a ese imput-->
-              <div color="error" *ngIf="f.nombre.error">*</div>
+              <div color="error" *ngIf="f.nombre.errors">*</div>
             </ion-item>
             <ion-item>
               <ion-input formControlName="correo" type="email" placeholder="Correo" ngModel required></ion-input>
