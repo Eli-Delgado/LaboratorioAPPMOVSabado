@@ -1,5 +1,5 @@
 <ion-content  padding>
-  <form #form="ngForm" (ngSubmit)="login(form)">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
     <ion-grid>
       <ion-row  justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
@@ -14,14 +14,14 @@
             </div>
             <br><br>
             <ion-item>
-              <ion-input name="email" type="email" placeholder="Correo" ngModel required></ion-input>
+              <ion-input formControlName="correo" type="email" placeholder="Correo" ngModel required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="password" type="password" placeholder="Contraseña" ngModel required></ion-input>
+              <ion-input formControlName="contrasena" type="password" placeholder="Contraseña" ngModel required></ion-input>
             </ion-item>
           </div>
           <div padding>
-            <ion-button shape ="round" size="large" type="submit" [disabled]="form.invalid" expand="block"><b>Entrar</b></ion-button>
+            <ion-button shape ="round" size="large" type="submit" [disabled]="loginForm.invalid" expand="block"><b>Entrar</b></ion-button>
             <!--[disabled]="form.invalid"-->
           </div>
         </ion-col>

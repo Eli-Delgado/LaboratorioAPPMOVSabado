@@ -12,17 +12,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrarPage } from './auth/registrar/registrar.page';
+import { LoginPage } from './auth/login/login.page';
 
 @NgModule({
-  declarations: [ AppComponent, RegistrarPage],
+  declarations: [AppComponent, RegistrarPage, LoginPage],
   entryComponents: [],
   imports: [BrowserModule,
-            IonicModule.forRoot(),
-            AppRoutingModule,
-            FormsModule,
-            ReactiveFormsModule,
-            HttpClientModule
-          ],
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
@@ -30,4 +31,4 @@ import { RegistrarPage } from './auth/registrar/registrar.page';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
