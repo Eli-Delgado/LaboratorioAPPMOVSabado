@@ -53,7 +53,7 @@ export class LoginPage implements OnInit {
       buttons: [{
         text: 'Aceptar',
         handler: () => {
-          this.router.navigateByUrl('/home');
+          this.router.navigateByUrl('/tabs/cuenta');
         }
       }]
     });
@@ -63,7 +63,7 @@ export class LoginPage implements OnInit {
 
   async error(error: string) {
     const alert = await this.alertController.create({
-      header: 'Alert',
+      header: 'Alerta',
       subHeader: 'Error',
       message: error,
       buttons: [{
