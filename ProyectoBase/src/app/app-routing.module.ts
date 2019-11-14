@@ -13,8 +13,10 @@ const routes: Routes = [
   { path: 'registrar', component: RegistrarPage  },
   { path: 'login', component: LoginPage },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'cuenta', loadChildren: './cuenta/cuenta.module#CuentaPageModule' },  { path: 'movimientos', loadChildren: './movimientos/movimientos.module#MovimientosPageModule' },
+  { path: 'cuenta', loadChildren: './cuenta/cuenta.module#CuentaPageModule' },
+  { path: 'movimientos', loadChildren: './movimientos/movimientos.module#MovimientosPageModule' },
   { path: 'resumen', loadChildren: './resumen/resumen.module#ResumenPageModule' },
+  //{ path: 'modal-movimiento', loadChildren: './modal-movimiento/modal-movimiento.module#ModalMovimientoPageModule' },
 
   /*{ path: 'modal-add', loadChildren: './modal-add/modal-add.module#ModalAddPageModule' }*/
 

@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MovimientosPage } from './movimientos.page';
+import { ModalMovimientoPage } from '../modal-movimiento/modal-movimiento.page';
+import { ModalMovimientoPageModule } from '../modal-movimiento/modal-movimiento.module';
 
 const routes: Routes = [
   {
@@ -15,11 +17,17 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  entryComponents: [
+    ModalMovimientoPage
+  ],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ModalMovimientoPageModule
+  ],
+  exports: [
   ],
   declarations: [MovimientosPage]
 })
