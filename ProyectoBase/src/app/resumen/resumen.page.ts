@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef , AfterViewInit} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -7,9 +7,9 @@ import { Chart } from 'chart.js';
   styleUrls: ['./resumen.page.scss']
 })
 export class ResumenPage implements AfterViewInit {
-  @ViewChild('doughnutCanvas', {static: false})
-  
-  doughnutReference: ElementRef; 
+  @ViewChild('doughnutCanvas', { static: false })
+
+  doughnutReference: ElementRef;
 
   private doughnutChart: Chart;
 
@@ -19,28 +19,38 @@ export class ResumenPage implements AfterViewInit {
       type: 'doughnut',
       data: {
         labels: ['Deuda', 'Hogar', 'Alimento', 'Entretenimiento', 'Transporte',
-         'Educacion', 'Regalos'​, ​'Viajes'​, ​'Ingresos'​, ​'Ropa y Calazado'],
+          'Educacion', 'Regalos', 'Viajes', 'Ingresos', 'Ropa y Calazado'],
 
         datasets: [
           {
             label: '# de Porcentaje',
-            data: [​10​,​10​,​10​,​10​,​10​,​10​,​10​,​10​,​10​,​10​],
+            data: [5, 10, 5, 5, 10, 15, 5, 5, 5, 20],
 
             backgroundColor: [
-              ​'#FBA7A7'​,
-              '#F4CFA3'​,
-              ​'#FDF6A9'​,
-              '#EDFCA9'​,
-              '#C3ECAC'​,
-              '#A9F2D5'​,
-              '#BCFBF0'​,​
-              ​'#E0DEE1'​,​
-              '#AFE6F8'​,​
-              '#D2C6F4'
+
+              "#FF3333",
+              "#FFA533",
+              "#FFF633",
+              "#C7FF33",
+              "#52FF33",
+              "#33FFFF",
+              "#33BEFF",
+              "#4C33FF",
+              "#F933FF",
+              "#FF3377"
             ],
 
-            hoverBackgroundColor: ['#FF0101'​, ​'#FA8B04'​, ​'#FDF103'​, ​'#BEFE01'​, ​'#54D304'​,
-            '#13EA97'​,​ ​'#4BE4E1'​, ​'#888789'​, '#046BF3'​, ​'#8253F6'​]
+            hoverBackgroundColor: [
+              "#FF3300",
+              "#FFA500",
+              "#FFF600",
+              "#C7FF00",
+              "#52FF00",
+              "#33FFCC",
+              "#33BECC",
+              "#4C33CC",
+              "#F933CC",
+              "#FF3344"]
           }
         ]
       }
