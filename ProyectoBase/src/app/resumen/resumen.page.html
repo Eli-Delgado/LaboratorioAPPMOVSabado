@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>resumen</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-header >
+    <ion-toolbar  class="ion-text-center">
+      <ion-title>Resumen
+        <ion-icon name="pie"></ion-icon>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div>
+        <ion-segment class="divCaja">
+            <ion-segment-button value="ingreso" checked>
+              <ion-label>Ingreso</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="egreso">
+              <ion-label>Egreso</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+    </div>
+    <canvas width="200" height="200" #doughnutCanvas></canvas>
+  </ion-content>
